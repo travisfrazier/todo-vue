@@ -1,17 +1,15 @@
 <template>
-  <Layout>
-    <Header />
+  <Layout :class="darkMode ? 'dark-theme' : 'light-theme'">
+    <Header @updateMode="toggleMode" />
     <main>
       <List />
     </main>
-    <Complete />
   </Layout>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
 import List from  '../components/List.vue'
-import Complete from '../components/Complete.vue'
 
 export default {
   metaInfo: {
@@ -19,8 +17,17 @@ export default {
   },
   components: {
     Header,
-    List,
-    Complete
+    List
+  },
+  data() {
+    return {
+      darkMode: false
+    }
+  },
+  methods: {
+    toggleMode() {
+      this.darkMode = !this.darkMode;
+    }
   }
 }
 </script>

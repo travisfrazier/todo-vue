@@ -15,9 +15,10 @@
       </li>
       </draggable>
     </ul>
-    <div class="list-functions">
+    <div v-if="this.ToDoItems.length > 0" class="list-functions">
       <span @click="clearCompleted">Clear Completed</span>
     </div>
+    <span v-if="this.ToDoItems.length > 0" class="info">Drag and drop to reorder list</span>
   </section>
 </template>
 

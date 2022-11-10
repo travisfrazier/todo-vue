@@ -35,6 +35,10 @@ body {
   color: #494C6B;
 }
 
+.layout {
+  height: 100vh;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -45,13 +49,22 @@ body {
   width: 100%;
   height: 300px;
   h1 {
-    padding-top: 20px;
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #fff;
     letter-spacing: 1.2rem;
     text-align: left;
+  }
+  .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    .image-toggle {
+      justify-self: end;
+      cursor: pointer;
+    }
   }
 }
 
@@ -68,6 +81,9 @@ main {
   width: 540px;
   margin: 0 auto;
   text-align: center;
+  @media only screen and (max-width: 550px) {
+    width: 340px;
+  }
 }
 
 input {
@@ -193,4 +209,20 @@ a {
     }
   }
 }
+
+//Dark Theme Styles 
+.dark-theme {
+  background-color: #171823;
+  .header {
+      background-image: url("../images/bg-desktop-dark.jpg");
+  }
+  input, .todo-wrapper {
+    background-color: #25273D;
+    color: #C8CBE7;
+  }
+  li {
+    border-color: #393A4B;
+  }
+}
+
 </style>
