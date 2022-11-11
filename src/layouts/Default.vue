@@ -90,10 +90,15 @@ input {
   font-size: 1.8rem;
   padding: 20px 24px;
   font-family: "Josefin Sans", sans-serif;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   border: none;
   &:checked + label {
     text-decoration: line-through;
+  }
+}
+
+form {
+  input {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -143,6 +148,7 @@ ul {
     background: #ffffff;
     div {
       display: flex;
+      align-items: center;
     }
     label {
       padding: 20px 24px;
